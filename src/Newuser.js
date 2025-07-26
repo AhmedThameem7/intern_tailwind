@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import user from "./images/User.svg";
-
+import {motion} from 'framer-motion'
 function Newuser() {
   const [name, setName] = useState("");
   const [mail, setmail] = useState("");
@@ -75,7 +75,11 @@ function Newuser() {
   };
 
   return (
-    <div className="flex flex-col items-center font-[cursive] mt-24">
+    <motion.div className="flex flex-col items-center font-[cursive] mt-24 mb-24"
+    initial={{opacity:0,y:-100}}
+    animate={{opacity:1,y:0}}
+    transition={{duration:1,ease:'easeIn'}}
+      >
       <form
         className="flex flex-col gap-6 caret-red-400 border-2 border-gray-400 p-8 w-[90%] md:w-[600px] rounded-lg"
         onSubmit={handleuser}
@@ -139,7 +143,7 @@ function Newuser() {
           Register
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 }
 

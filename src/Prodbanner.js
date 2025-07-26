@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { CartContext } from './CartContext';
-
 import wrap from "./images/wrap.jpg";
 import nuggets from "./images/nuggets.jpg";
 import burger from "./images/burger.jpg";

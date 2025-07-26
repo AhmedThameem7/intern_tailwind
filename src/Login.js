@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
 import animationData from "./images/animation.json";
-
+import {motion} from 'framer-motion'
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -42,11 +42,18 @@ function Login() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 mt-24 mx-4">
-      <div className="w-full md:w-[25rem] mx-auto">
+      <motion.div className="w-full md:w-[25rem] mx-auto"
+      initial={{opacity:0,x:100}}
+      animate={{opacity:1,x:0}}
+      transition={{duration:1,ease:'easeIn'}}>
         <Lottie animationData={animationData} loop={true} />
-      </div>
+      </motion.div>
 
-      <div className="flex justify-center mb-6">
+      <motion.div className="flex justify-center mb-6"
+      initial={{opacity:0,x:-100}}
+      animate={{opacity:1,x:0}}
+      transition={{duration:1,ease:'easeIn'}}
+      >
         <form
           className="flex flex-col gap-6 w-[90%] sm:w-[70%] md:w-[25rem] rounded-lg border-2 border-gray-400 p-8 mt-4 bg-[#EAE0D5] shadow-[13px_21px_15px_gray] font-[Franklin_Gothic_Medium] caret-red-400"
           onSubmit={handlesbmt}
@@ -85,7 +92,7 @@ function Login() {
             </Link>
           </div>
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 }

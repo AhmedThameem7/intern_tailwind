@@ -34,7 +34,7 @@ const Header = () => {
           Cart
         </Link>
         <Link to="/Login">
-          <button className="bg-red-600 animate-bounce hover:bg-black hover:text-red-500 text-black font-bold rounded-md px-3 py-1 shadow-md transition-all">
+          <button className="bg-red-600 shadow-slate-700 shadow-red-500 animate-bounce hover:bg-black hover:text-red-500 text-black font-bold rounded-md px-3 py-1 shadow-md transition-all">
             Login
           </button>
         </Link>

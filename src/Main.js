@@ -68,7 +68,7 @@ function Main() {
 
       <div className="grid grid-cols-1 gap-3 md:grid-cols-[1fr_2fr] bg-green-200  mx-auto rounded-md overflow-hidden">
         <motion.img
-          className="h-[500px] rounded-lg mx-6 max-w-full m-auto"
+          className="h-[500px] rounded-lg  max-w-full m-auto"
           src={slide}
           alt="Slide"
           initial={{ opacity: 0, x: -100 }}
